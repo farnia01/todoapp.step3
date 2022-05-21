@@ -1,0 +1,211 @@
+*/ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: conic-gradient(
+      black 90deg,
+      white 90deg 180deg,
+      black 180deg 270deg,
+      white 270deg 360deg
+    )
+    top right / 300px 300px repeat;
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 2rem;
+  color: black;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-text {
+  color: rgb(190, 5, 5);
+  font-size: 100px;
+  font-family: "Press Start 2P", cursive;
+  font-weight: bold;
+}
+
+/* the input style */
+form input,
+form button {
+  padding: 22px;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  border-radius: 10px;
+  border: 6px solid rgb(3, 3, 194);
+  color: rgb(2, 87, 2);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.todo-input {
+  width: 30%;
+  font-style: italic;
+  font-family: "Press Start 2P", cursive;
+  font-size: 15px;
+}
+
+form button {
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  padding: 1px;
+  background: white;
+  font-size: 30px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  border-radius: 10px;
+  border: 7px solid rgb(3, 3, 194);
+}
+
+.filter-todo {
+  padding: 25px 45px 25px 25px;
+  color: rgb(185, 6, 6);
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 10px;
+  width: 100%;
+  margin-right: 10px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: conic-gradient(
+      black 90deg,
+      rgb(168, 165, 165) 90deg 180deg,
+      black 180deg 270deg,
+      rgb(168, 165, 165) 270deg 360deg
+    )
+    top right / 30px 30px repeat;
+  color: rgb(211, 12, 12);
+  border: none;
+  padding: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+
+.complete-btn {
+  background: conic-gradient(
+      black 90deg,
+      rgb(168, 165, 165) 90deg 180deg,
+      black 180deg 270deg,
+      rgb(168, 165, 165) 270deg 360deg
+    )
+    top right / 30px 30px repeat;
+  color: rgb(4, 133, 4);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+  color: rgb(1, 54, 1);
+  font-family: "Press Start 2P", cursive;
+  font-size: 15px;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fa-plus-square {
+  color: rgb(156, 5, 5);
+}
+
+.fa-plus-square:hover {
+  color: rgb(1, 56, 1);
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(30deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 7px solid rgb(3, 3, 194);
+  border-radius: 20px;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+}
+
+/* select the options */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px;
+  background-image: linear-gradient(to bottom right, black, red);
+  cursor: pointer;
+  pointer-events: none;
+  border-bottom-left-radius: 10px;
+  background-position: left;
+  background-size: 100%;
+}
+
+.select:hover::after {
+  background-image: linear-gradient(to bottom right, red, rgb(0, 0, 100));
+}
